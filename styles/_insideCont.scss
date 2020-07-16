@@ -1,0 +1,162 @@
+@mixin hoverEffect {
+        &:hover{
+    background-color: $eigth-color;
+    
+
+    .delete-btn{
+        opacity: 1; 
+    }
+}
+}
+
+@mixin inlineContainerStyle {
+    margin: 5px;
+    background-color: $sixth-color;
+    border-radius: 5px;
+    padding: 1px 5px;
+    
+}
+
+
+
+.add-list-container, .show-list-container{
+    background-color: $tertiary-color;
+    margin: 10px 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 10px 15px;
+    box-shadow: 5px 5px 15px black ;
+    border: 1px solid $sixth-color;
+    
+}
+
+.add-list-container{
+    grid-area: addListContainer;
+}
+
+.show-list-container{
+    grid-area: showListContainer;
+}
+
+h3{
+    @include inlineContainerStyle();
+    font-size: 1.5rem;
+    padding: 10px 5px;
+    background-color: $first-color;
+    border-radius: 5px;
+    box-shadow: 1px 3px 6px black ;
+    border: 1px solid $border-color-h3;
+
+} 
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    @include inlineContainerStyle();
+    cursor: pointer;
+    list-style-position: inside;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+    transition: background-color 0.3s ease;
+
+    @include hoverEffect();
+    
+}
+
+.show-list-item{
+    @include inlineContainerStyle();
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+    transition: background-color 0.3s ease;
+
+
+    @include hoverEffect();
+
+    & label{
+        cursor: pointer;
+        width: 100%;
+    }
+    & input{
+        cursor: pointer;
+    }
+    
+}
+
+i{
+    color: $fourth-color;
+}
+
+span{
+    @include inlineContainerStyle();
+    margin: 15px 0;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+    outline: none;
+
+    & i{
+        padding: 0 5px 0 5px;     
+    }
+
+    & input{
+        align-items: center;
+        height: 25px;
+        width: 100%;
+        border: 1px solid $fourth-color;
+        border-radius: 5px;
+
+        &::placeholder{
+        color: $seventh-color;
+    }
+    }
+    
+}
+
+.active{
+    background-color: $tenth-color;
+    
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+
+
+.delete-btn{
+    cursor: pointer;
+    opacity: 0.08;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: scale(1.2)
+    }
+}
+
+.fa-plus{
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.3s ease;
+    color: $eigth-color;
+
+    &:hover{
+        transform: scale(1.2)
+    }
+}
+
+button{
+    background: transparent;
+    border: 0;
+    color: $fourth-color;
+}
