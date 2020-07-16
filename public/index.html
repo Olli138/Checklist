@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <h1>Checklist</h1>
+
+    <div class="container" id="container">
+
+        <div class="add-list-container" id="add-list-container">
+            <h3>Your Lists</h3>
+            <ul class="add-list-current" id="add-list-current"></ul>
+            <div class="add-list-new" id="add-list-new">
+                <span><i class="fas fa-plus" id="add-list-plus"></i>
+                    <input type="text" class="add-list-input" id="add-list-input" placeholder="Add a new List"></span>
+            </div>
+        </div>
+
+
+        <div class="show-list-container" id="show-list-container">
+            <h3 class="show-list-heading" id="show-list-heading">Click on a list name</h3>
+            <div class="show-list-items" id="show-list-items"></div>
+
+            <div class="show-list-new" id="show-list-new">
+                <span><i class="fas fa-plus" id="show-list-plus"></i>
+                    <input type="text" class="show-list-input" id="show-list-input" placeholder="Add a new item"></span>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
