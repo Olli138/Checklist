@@ -37,18 +37,6 @@ class Data {
         return newItem;
     }
 
-    setItems() {
-        localStorage.setItem(this.heading, this.items);
-    }
-
-    getHeading() {
-        return this.heading;
-    }
-
-    getItems() {
-        return localStorage.getItem(this.heading);
-    }
-
     //Clear Input Element
     clearInput() {
         addListInput.value = '';
@@ -107,7 +95,6 @@ addListPlus.addEventListener('click', () => {
         alert('Please enter a name for your list');
     }
 });
-
 
 
 //Display the Heading & items on Show Container
@@ -178,7 +165,6 @@ showListPlus.addEventListener('click', () => {
         //get current index of element in state
         let indexOfActiveList = state.stateLists.findIndex(((arr) => (arr.heading === activeId)));
 
-
         //get current element in localStorage
         let objLocalStorage = localStorage.getItem(activeId);
         const items = objLocalStorage;
@@ -193,7 +179,6 @@ showListPlus.addEventListener('click', () => {
         } else {
             updatedItems = objLocalStorage + ', ' + input;
         }
-
 
         //change element in state
         const updatedStateObject = { heading: activeId, items: updatedItems };
